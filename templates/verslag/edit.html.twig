@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Verslag{% endblock %}
+
+{% block body %}
+    <h1>Edit Verslag</h1>
+
+    {{ include('verslag/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('verslag_index') }}">back to list</a>
+
+    {{ include('verslag/_delete_form.html.twig') }}
+{% endblock %}

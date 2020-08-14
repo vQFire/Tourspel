@@ -1,0 +1,58 @@
+{{ form_start(form, {'attr': {'class': 'flex flex-wrap h-full w-full'}}) }}
+    <div class="w-full">
+        {% if etappe.id %}
+        <h1>Etappe aanpassen</h1>
+        {% else %}
+        <h1>Etappe aanmaken </h1>
+        {% endif %}
+        <div class="py-2">
+            {{ form_label(form.Stage) }}
+            {{ form_widget(form.Stage, {'attr': {'class': 'border rounded px-1'}}) }}
+        </div>
+        <div class="py-2">
+            {{ form_label(form.Type) }}
+            {{ form_widget(form.Type, {'attr': {'class': 'border rounded px-1'}}) }}
+        </div>
+        <div class="py-2">
+            {{ form_label(form.Date) }}
+            {{ form_widget(form.Date, {'attr': {'class': 'border rounded px-1'}}) }}
+        </div>
+        <div class="py-2">
+            <table>
+                <thead>
+                    <tr class="my-2">
+                        <th>{{ form_label(form.Start, "Start",{'attr': {'class': 'py-3'}}) }}</th>
+                        <th></th>
+                        <th>{{ form_label(form.Finish, "Finish",{'attr': {'class': 'py-3'}}) }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ form_widget(form.Start, {'attr': {'class': 'border rounded px-2 py-1'}}) }}</td>
+                        <td class="px-4">naar</td>
+                        <td>{{ form_widget(form.Finish, {'attr': {'class': 'border rounded px-2 py-1'}}) }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="py-2">
+            {{ form_label(form.Distance) }}
+            {{ form_widget(form.Distance, {'attr': {'class': 'border rounded px-1'}}) }}
+        </div>
+        <div class="py-2">
+            {{ form_label(form.Renner) }}
+            {{ form_widget(form.Renner, {'attr': {'class': 'border rounded px-1'}}) }}
+        </div>
+        <div class="py-2">
+            {{ form_label(form.Deelnemer) }}
+            {{ form_widget(form.Deelnemer, {'attr': {'class': 'border rounded px-1'}}) }}
+        </div>
+    </div>
+    <div class="flex mt-auto">
+        <a class="bg-blue-500 hover:bg-blue-700 transition-colors duration-200 text-white font-bold py-2 px-4 rounded" href="{{ path('etappe_index') }}">Terug</a>
+        <button class="bg-green-500 hover:bg-green-700 transition-colors duration-200 text-white font-bold py-2 px-4 rounded mx-3">{{ button_label|default('Save') }}</button>
+        {% if etappe.id %}
+            {{ include('etappe/_delete_form.html.twig') }}
+        {% endif %}
+    </div>
+{{ form_end(form) }}

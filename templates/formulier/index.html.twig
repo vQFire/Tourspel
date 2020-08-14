@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FormulierController!{% endblock %}
+
+{% block body %}
+    <div class="verslag">
+        <h1>{{ formulier.titel }}</h1>
+
+        {% if "now"|date("Y") > formulier.year %}
+            <div class="alert alert-danger">
+                <strong>Let op dit!</strong> Deze content is van {{ formulier.year }}, nieuwe content komt later!
+            </div>
+        {% endif %}
+
+        {{ formulier.content|raw }}
+
+        {% if is_granted("ROLE_ADMIN") %}
+            <a class="bg-green-500 hover:bg-green-700 transition-colors duration-200 text-white font-bold py-2 px-4 rounded mt-4" href="{{ path("formulier_edit", {'id': formulier.id}) }}">Aanpassen</a>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+    <div class="w-full max-w-xs mx-auto">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method="post">
+            {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+
+            {% if app.user %}
+                <div class="bg-red-bg text-red-text border border-red-border rounded mb-3 py-2 px-3">
+                    Je bent al ingelogd, <a class="underline" href="{{ path('app_logout') }}">Logout</a>
+                </div>
+            {% endif %}
+
+            <section class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="inputUsername">Geberuikersnaam</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" value="{{ last_username }}" name="username" id="inputUsername" required autofocus autocomplete="username">
+            </section>
+
+            <section class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="inputPassword">Wachtwoord</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="password" name="password" id="inputPassword" class="form-control" required autocomplete="password">
+            </section>
+
+            <input type="hidden" name="_csrf_token"
+                   value="{{ csrf_token('authenticate') }}"
+            >
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" name="_remember_me"> Onthoud mij
+                </label>
+            </div>
+
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                Inloggen
+            </button>
+        </form>
+    </div>
+{% endblock %}

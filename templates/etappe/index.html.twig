@@ -1,0 +1,111 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Etappes{% endblock %}
+
+{% block body %}
+    {% if vars[0] or vars[1] %}
+        <div class="alert alert-info">
+            {% if vars[0] is defined and vars[1] is null %}
+                {% if vars[0] is same as ("all") %}
+                    U heeft gezocht op alle jaren
+                    {% else %}
+                    U heeft gezocht op het jaar {{ vars[0] }}
+                {% endif %}
+            {% elseif vars[0] is null and vars[1] is defined %}
+                {% if vars[1] is same as ("Alles") %}
+                    U heeft gezocht voor alles
+                    {% else %}
+                    U heeft alleen gezocht voor de {{ vars[0] }}
+                {% endif %}
+            {% else %}
+                {% if vars[0] is same as ("all") and vars[1] is not same as("Alles") %}
+                    U heeft gezocht voor alle jaren en alleen de {{ vars[1] }}
+                {% elseif vars[1] is same as("Alles") %}
+                    U heeft gezocht voor {{ vars[1] }} uit {{ vars[0] }}
+                {% else %}
+                    U heeft gezocht voor de {{ vars[1] }} uit {{ vars[0] }}
+                {% endif %}
+            {% endif %}
+        </div>
+    {% endif %}
+
+    <table class="table-auto w-full etappes">
+        <thead>
+            <tr>
+                <th class="w-1/12">Stage</th>
+                <th class="w-1/12">Type</th>
+                <th class="w-3/12">Start en Finish</th>
+                <th class="w-1/12">Afstand</th>
+                <th class="w-2/12">Winnaar (Renner)</th>
+                <th class="w-2/12">Winnaar (Deelnemer)</th>
+                <th class="w-1/12"></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for etappe in etappes %}
+            <tr class="h-16 hover:bg-gray-300">
+                {% if is_granted("ROLE_ADMIN") %}
+                    <td class="text-center">
+                        <a class="link" href="{{ path('etappe_edit', {'id': etappe.Id}) }}">{{ etappe.Stage == 0 ? '-' : etappe.Stage }}</a>
+                    </td>
+                {% else %}
+                    <td class="text-center">
+                        {{ etappe.Stage == 0 ? '-' : etappe.Stage }}
+                    </td>
+                {% endif %}
+                <td class="text-center">{{ etappe.Type }}</td>
+                <td class="text-center px-2" title="{{ etappe.Start }} > {{ etappe.Finish }}">
+                    {{ etappe.Start }} {{ etappe.Finish ? ">" : ""}} {{ etappe.Finish }}
+                </td>
+                <td class="text-center">{{ etappe.Distance ? etappe.Distance ? : '' }} {{ etappe.Distance ? "km" : '' }}</td>
+                <td class="text-center">{{ etappe.Renner }}</td>
+                <td class="text-center">{{ etappe.Deelnemer }}</td>
+                <td>
+                    {% if etappe.verslagen.count > 0 %}
+                        <a class="link" href="{{ path('verslag_show', {'id': etappe.verslagen.current.id}) }}">{{ etappe.verslagen.current.titel }}</a>
+                        {% elseif is_granted("ROLE_ADMIN") %}
+                        <a class="link" href="{{ path('verslag_new', {'id': etappe.id}) }}">Verslag maken</a>
+                    {% endif %}
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+    <h2 class="mb-3 mt-12">Historie</h2>
+    <form class="flex" method="get" action="{{ path('etappe_index') }}">
+        <div class="relative w-4/12">
+            <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-12" name="year" id="years">
+                <option value="all">Alle jaren</option>
+                {% for year in years %}
+                    <option value="{{ year[1] }}" {{ vars[0] is same as (year[1]) ? "selected" : "" }}>{{ year[1] }}</option>
+                {% endfor %}
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+            </div>
+        </div>
+        <div class="flex justify-center items-center w-6/12">
+            <section>
+                <label for="all">Alles</label>
+                <input type="radio" id="all" name="type" value="Alles" {{ vars[1] is not same as ("Etappes") and vars[1] is not same as ("Eindklassement") ? "checked" : ""}}>
+            </section>
+            <section class="px-4">
+                <label for="etappes">Alleen etappes</label>
+                <input type="radio" id="etappes" name="type" value="Etappes" {{ vars[1] is same as ("Etappes") ? "checked" : ""}}>
+            </section>
+            <section>
+                <label for="final">Eindklassement</label>
+                <input type="radio" id="final" name="type" value="Eindklassementen" {{ vars[1] is same as ("Eindklassementen") ? "checked" : ""}}>
+            </section>
+        </div>
+        <div class="flex justify-center items-center w-2/12">
+            <button class="bg-green-500 hover:bg-green-700 transition-colors duration-200 text-white font-bold py-2 px-4 rounded mx-3" type="submit">Zoeken</button>
+        </div>
+    </form>
+{% endblock %}

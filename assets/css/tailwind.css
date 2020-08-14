@@ -1,0 +1,99 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+html, body {
+    height: 100%;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+.link {
+    color: #007bff;
+    text-decoration: underline;
+    background-color: transparent;
+    transition: color .1s ease;
+}
+
+.link:hover {
+    color: #0056b3;
+}
+
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+.verslag h1 {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.verslag h2, .verslag h3, .verslag h4 {
+    color: #dc3545;
+}
+
+.verslag h2 {
+    margin-bottom: 8px;
+}
+
+.verslag p {
+    margin-bottom: 10px;
+}
+
+.verslag table {
+    width: 100% !important;
+}
+
+.verslag table tr:nth-child(odd) {
+    background-color: #edf2f7;
+}
+
+.verslag table tr {
+    transition: background-color .1s ease;
+}
+
+.verslag table tr:hover {
+    background-color: #e2e8f0;
+}
+
+.verslag table td {
+    padding: 3px 0;
+}
+
+.verslag table tr:first-child td {
+    text-align: center;
+}
+
+.verslag table tr td:first-child {
+    text-align: center;
+}
+
+.etappes tbody tr:nth-child(even) {
+    background-color: #edf2f7;
+}
+
+
