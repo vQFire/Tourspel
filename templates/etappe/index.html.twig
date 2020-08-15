@@ -78,8 +78,8 @@
 
 
     <h2 class="mb-3 mt-12">Historie</h2>
-    <form class="flex" method="get" action="{{ path('etappe_index') }}">
-        <div class="relative w-4/12">
+    <form class="flex flex-col w-screen md:flex-row pb-8" method="get" action="{{ path('etappe_index') }}">
+        <div class="relative w-full md:w-4/12">
             <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-12" name="year" id="years">
                 <option value="all">Alle jaren</option>
                 {% for year in years %}
@@ -90,7 +90,7 @@
                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
             </div>
         </div>
-        <div class="flex justify-center items-center w-6/12">
+        <div class="flex justify-center items-center w-full md:w-6/12 my-5 md:my-0 text-center">
             <section>
                 <label for="all">Alles</label>
                 <input type="radio" id="all" name="type" value="Alles" {{ vars[1] is not same as ("Etappes") and vars[1] is not same as ("Eindklassement") ? "checked" : ""}}>
@@ -104,8 +104,8 @@
                 <input type="radio" id="final" name="type" value="Eindklassementen" {{ vars[1] is same as ("Eindklassementen") ? "checked" : ""}}>
             </section>
         </div>
-        <div class="flex justify-center items-center w-2/12">
-            <button class="bg-green-500 hover:bg-green-700 transition-colors duration-200 text-white font-bold py-2 px-4 rounded mx-3" type="submit">Zoeken</button>
+        <div class="flex justify-center items-center w-full md:w-2/12 ">
+            <button class="bg-green-500 hover:bg-green-700 transition-colors duration-200 text-white font-bold py-3 px-6 md:py-2 md:px-4 rounded mx-3" type="submit">Zoeken</button>
         </div>
     </form>
 {% endblock %}
