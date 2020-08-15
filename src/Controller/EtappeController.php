@@ -50,9 +50,17 @@ class EtappeController extends AbstractController
             $etappes = $filteredEtappes;
         }
 
+        $years = $etappeRepository->getYears();
+        $filteredYears = [];
+        foreach ($years as $Year) {
+            if (!in_array($Year, $filteredYears)) {
+                array_push($filteredYears, $Year);
+            }
+        }
+
         return $this->render('etappe/index.html.twig', [
             'etappes' => $etappes,
-            'years' => $etappeRepository->getYears(),
+            'years' => $filteredYears,
             'vars' => [
                 $year, $type
             ]

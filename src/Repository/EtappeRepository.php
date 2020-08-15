@@ -39,7 +39,6 @@ class EtappeRepository extends ServiceEntityRepository
         return $this->createQueryBuilder('e')
             ->select('YEAR(e.Date)')
             ->orderBy('e.Date', "DESC")
-            ->distinct()
             ->getQuery()
             ->getResult();
     }

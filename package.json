@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "encore dev --watch"
+    "start": "encore dev --watch",
+    "build": "babel src -d lib"
   },
   "devDependencies": {
     "@symfony/webpack-encore": "^0.30.2",
