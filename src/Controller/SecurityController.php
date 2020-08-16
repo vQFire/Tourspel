@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\UserType;
+use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -62,18 +63,31 @@ class SecurityController extends AbstractController
         throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
     }
 
-//    /**
-//     * @Route("/admin", name="admin")
-//     */
-//    public function makeAdmin()
-//    {
-//        $user = $this->getUser();
-//        $user->setRoles(['ROLE_ADMIN']);
-//
-//        $em = $this->getDoctrine()->getManager();
-//        $em->persist($user);
-//        $em->flush();
-//
-//        return $this->redirectToRoute('home_page');
-//    }
+    /**
+     * @Route("/user", name="user_index")
+     */
+    public function getUsers (UserRepository $userRepository)
+    {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
+        return $this->render('security/index.html.twig', [
+            'users' => $userRepository->findAll()
+        ]);
+    }
+
+    /**
+     * @Route("/user/{id}/admin", name="user_admin")
+     */
+    public function makeAdmin (User $user)
+    {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
+        $user->setRoles(['ROLE_ADMIN']);
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($user);
+        $em->flush();
+
+        return $this->redirectToRoute('home_page');
+    }
 }

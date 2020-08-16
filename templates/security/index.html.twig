@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User index{% endblock %}
+
+{% block body %}
+    <table class="table-auto w-full">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Naam</th>
+                <th>Acties</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td class="text-center">{{ user.id }}</td>
+                    <td class="text-center">{{ user.username }}</td>
+                    <td class="text-center"><a class="link" href="{{ path('user_admin', {'id': user.id}) }}">Maak admin</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
