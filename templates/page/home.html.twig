@@ -2,18 +2,21 @@
 
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'E:/Programming/TourDeFrance/tourdefrance/src/Controller/PageController.php'|file_link(0) }}">src/Controller/PageController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'E:/Programming/TourDeFrance/tourdefrance/templates/page/index.html.twig'|file_link(0) }}">templates/page/index.html.twig</a></code></li>
-    </ul>
-</div>
+        <div class="flex flex-col">
+                <h1 class="text-center mb-2">Tourspel 2020</h1>
+                <h4 class="text-center mb-0">Door:</h4>
+                <h3 class="text-center mb-6 mt-0">René van Leeuwen</h3>
+                <div class="flex flex-col">
+                        <div class="w-full flex">
+                                <img class="w-1/3 object-contain" src="{{ asset('build/images/Renners/Roglic.png') }}" alt="Roglic">
+                                <img class="w-1/3 object-contain" src="{{ asset('build/images/Renners/Dumoulin.png') }}" alt="Roglic">
+                                <img class="w-1/3 object-contain" src="{{ asset('build/images/Renners/Kruijswijk.png') }}" alt="Roglic">
+                        </div>
+                        <div class="w-full flex">
+                                <img class="w-1/3 object-contain" src="{{ asset('build/images/Renners/Thomas.png') }}" alt="Roglic">
+                                <img class="w-1/3 object-contain" src="{{ asset('build/images/Renners/Bernal.png') }}" alt="Roglic">
+                                <img class="w-1/3 object-contain" src="{{ asset('build/images/Renners/Froome.png') }}" alt="Roglic">
+                        </div>
+                </div>
+        </div>
 {% endblock %}

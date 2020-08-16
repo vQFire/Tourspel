@@ -30,7 +30,7 @@
                     </div>
                 </div>
             </header>
-            <div class="container mx-auto flex flex-wrap p-5 flex-col flex-auto content">
+            <div class="container mx-auto flex flex-wrap p-5 flex-row sm:flex-col flex-auto content">
                 {% for label, messages in app.flashes %}
                     {% for message in messages %}
                         <div class="alert alert-{{ label }}">
