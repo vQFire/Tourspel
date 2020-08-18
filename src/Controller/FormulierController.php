@@ -10,12 +10,12 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/formulier")
+ * @Route("/regel")
  */
 class FormulierController extends AbstractController
 {
     /**
-     * @Route("/", name="formulier_page")
+     * @Route("/", name="regel_page")
      */
     public function index (FormulierRepository $formulierRepository)
     {
@@ -33,7 +33,7 @@ class FormulierController extends AbstractController
     }
 
     /**
-     * @Route("/edit/{id}", name="formulier_edit")
+     * @Route("/edit/{id}", name="regel_edit")
      */
     public function edit(Request $request, Formulier $formulier)
     {

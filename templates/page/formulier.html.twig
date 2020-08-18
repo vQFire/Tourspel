@@ -1,0 +1,1475 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <style>
+    tr
+    {mso-height-source:auto;}
+    col
+    {mso-width-source:auto;}
+    br
+    {mso-data-placement:same-cell;}
+    .style2
+    {color:windowtext;
+    font-size:10.0pt;
+    font-weight:700;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    mso-style-name:ColLevel_;
+    mso-style-id:2;}
+    .style16
+    {color:blue;
+    font-size:10.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:underline;
+    text-underline-style:single;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    mso-style-name:Hyperlink;
+    mso-style-id:8;}
+    .style0
+    {mso-number-format:General;
+    text-align:general;
+    vertical-align:bottom;
+    white-space:nowrap;
+    mso-rotate:0;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    color:windowtext;
+    font-size:10.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Arial;
+    mso-generic-font-family:auto;
+    mso-font-charset:0;
+    border:none;
+    mso-protection:locked visible;
+    mso-style-name:Normal;
+    mso-style-id:0;}
+    td
+    {mso-style-parent:style0;
+    padding-top:1px;
+    padding-right:1px;
+    padding-left:1px;
+    mso-ignore:padding;
+    color:windowtext;
+    font-size:10.0pt;
+    font-weight:400;
+    font-style:normal;
+    text-decoration:none;
+    font-family:Arial;
+    mso-generic-font-family:auto;
+    mso-font-charset:0;
+    mso-number-format:General;
+    text-align:general;
+    vertical-align:bottom;
+    border:none;
+    mso-background-source:auto;
+    mso-pattern:auto;
+    mso-protection:locked visible;
+    white-space:nowrap;
+    mso-rotate:0;}
+    .xl66
+    {mso-style-parent:style16;
+    color:blue;
+    text-decoration:underline;
+    text-underline-style:single;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    text-align:center;
+    border-top:1.0pt solid windowtext;
+    border-right:none;
+    border-bottom:1.0pt solid windowtext;
+    border-left:1.0pt solid windowtext;}
+    .xl67
+    {mso-style-parent:style0;
+    color:black;
+    font-size:7.5pt;
+    font-weight:700;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    text-align:left;
+    vertical-align:top;
+    border-top:1.0pt solid windowtext;
+    border-right:none;
+    border-bottom:none;
+    border-left:1.0pt solid windowtext;
+    background:#969696;
+    mso-pattern:black none;
+    white-space:normal;}
+    .xl68
+    {mso-style-parent:style0;
+    color:black;
+    font-weight:700;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    text-align:center;
+    vertical-align:top;
+    border-top:1.0pt solid windowtext;
+    border-right:none;
+    border-bottom:none;
+    border-left:none;
+    background:#969696;
+    mso-pattern:black none;
+    white-space:normal;}
+    .xl69
+    {mso-style-parent:style0;
+    font-weight:700;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    border-top:1.0pt solid windowtext;
+    border-right:1.0pt solid windowtext;
+    border-bottom:none;
+    border-left:.5pt solid windowtext;
+    background:#969696;
+    mso-pattern:black none;}
+    .xl70
+    {mso-style-parent:style0;
+    color:black;
+    font-size:7.5pt;
+    font-weight:700;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    text-align:left;
+    vertical-align:top;
+    border-top:none;
+    border-right:none;
+    border-bottom:none;
+    border-left:1.0pt solid windowtext;
+    background:#969696;
+    mso-pattern:black none;
+    white-space:normal;}
+    .xl71
+    {mso-style-parent:style0;
+    color:black;
+    font-size:7.5pt;
+    font-weight:700;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    text-align:center;
+    vertical-align:top;
+    background:#969696;
+    mso-pattern:black none;
+    white-space:normal;}
+    .xl72
+    {mso-style-parent:style0;
+    color:black;
+    font-weight:700;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    text-align:center;
+    vertical-align:top;
+    background:#969696;
+    mso-pattern:black none;
+    white-space:normal;}
+    .xl73
+    {mso-style-parent:style0;
+    font-weight:700;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:"\@";
+    border-top:none;
+    border-right:1.0pt solid windowtext;
+    border-bottom:none;
+    border-left:.5pt solid windowtext;
+    background:#969696;
+    mso-pattern:black none;}
+    .xl74
+    {mso-style-parent:style0;
+    color:black;
+    font-weight:700;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    text-align:left;
+    vertical-align:top;
+    border-top:none;
+    border-right:none;
+    border-bottom:1.0pt solid windowtext;
+    border-left:1.0pt solid windowtext;
+    background:#969696;
+    mso-pattern:black none;}
+    .xl75
+    {mso-style-parent:style0;
+    color:black;
+    font-weight:700;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    text-align:left;
+    vertical-align:top;
+    border-top:none;
+    border-right:none;
+    border-bottom:1.0pt solid windowtext;
+    border-left:none;
+    background:#969696;
+    mso-pattern:black none;}
+    .xl76
+    {mso-style-parent:style0;
+    color:black;
+    font-size:7.5pt;
+    font-weight:700;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    text-align:center;
+    vertical-align:top;
+    border-top:none;
+    border-right:none;
+    border-bottom:1.0pt solid windowtext;
+    border-left:none;
+    background:#969696;
+    mso-pattern:black none;
+    white-space:normal;}
+    .xl77
+    {mso-style-parent:style0;
+    font-weight:700;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:"\@";
+    border-top:none;
+    border-right:1.0pt solid windowtext;
+    border-bottom:1.0pt solid windowtext;
+    border-left:.5pt solid windowtext;
+    background:#969696;
+    mso-pattern:black none;}
+    .xl78
+    {mso-style-parent:style0;
+    color:black;
+    font-weight:700;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    text-align:left;
+    vertical-align:top;
+    border-top:1.0pt solid windowtext;
+    border-right:none;
+    border-bottom:1.0pt solid windowtext;
+    border-left:1.0pt solid windowtext;
+    background:#969696;
+    mso-pattern:black none;}
+    .xl79
+    {mso-style-parent:style0;
+    color:black;
+    font-weight:700;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    text-align:left;
+    vertical-align:top;
+    border-top:1.0pt solid windowtext;
+    border-right:none;
+    border-bottom:1.0pt solid windowtext;
+    border-left:none;
+    background:#969696;
+    mso-pattern:black none;}
+    .xl80
+    {mso-style-parent:style0;
+    color:black;
+    font-size:7.5pt;
+    font-weight:700;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    text-align:center;
+    vertical-align:top;
+    border-top:1.0pt solid windowtext;
+    border-right:none;
+    border-bottom:1.0pt solid windowtext;
+    border-left:none;
+    background:#969696;
+    mso-pattern:black none;
+    white-space:normal;}
+    .xl81
+    {mso-style-parent:style0;
+    font-weight:700;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    mso-number-format:"\@";
+    border-top:1.0pt solid windowtext;
+    border-right:1.0pt solid windowtext;
+    border-bottom:1.0pt solid windowtext;
+    border-left:.5pt solid windowtext;
+    background:#969696;
+    mso-pattern:black none;}
+    .xl82
+    {mso-style-parent:style0;
+    font-size:13.0pt;
+    font-weight:700;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;}
+    .xl83
+    {mso-style-parent:style0;
+    font-weight:700;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;}
+    .xl84
+    {mso-style-parent:style0;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;}
+    .xl85
+    {mso-style-parent:style0;
+    border-top:.5pt solid windowtext;
+    border-right:none;
+    border-bottom:.5pt solid windowtext;
+    border-left:.5pt solid windowtext;
+    background:#C4D79B;
+    mso-pattern:black none;}
+    .xl86
+    {mso-style-parent:style0;
+    text-align:center;
+    border-top:.5pt solid windowtext;
+    border-right:none;
+    border-bottom:.5pt solid windowtext;
+    border-left:none;
+    background:#C4D79B;
+    mso-pattern:black none;}
+    .xl87
+    {mso-style-parent:style0;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    border-top:.5pt solid windowtext;
+    border-right:none;
+    border-bottom:.5pt solid windowtext;
+    border-left:none;
+    background:#C4D79B;
+    mso-pattern:black none;}
+    .xl88
+    {mso-style-parent:style0;
+    border-top:.5pt solid windowtext;
+    border-right:none;
+    border-bottom:.5pt solid windowtext;
+    border-left:none;
+    background:#C4D79B;
+    mso-pattern:black none;}
+    .xl89
+    {mso-style-parent:style0;
+    border:.5pt solid windowtext;
+    background:#C4D79B;
+    mso-pattern:black none;}
+    .xl90
+    {mso-style-parent:style0;
+    color:red;
+    font-size:20.0pt;
+    font-weight:700;
+    font-family:"Arial Black", sans-serif;
+    mso-font-charset:0;}
+    .xl91
+    {mso-style-parent:style0;
+    border:.5pt solid windowtext;}
+    .xl92
+    {mso-style-parent:style0;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    border:.5pt solid windowtext;}
+    .xl93
+    {mso-style-parent:style0;
+    border-top:none;
+    border-right:.5pt solid windowtext;
+    border-bottom:.5pt solid windowtext;
+    border-left:.5pt solid windowtext;}
+    .xl94
+    {mso-style-parent:style16;
+    color:blue;
+    text-decoration:underline;
+    text-underline-style:single;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    text-align:left;
+    border-top:1.0pt solid windowtext;
+    border-right:none;
+    border-bottom:1.0pt solid windowtext;
+    border-left:none;}
+    .xl95
+    {mso-style-parent:style16;
+    color:blue;
+    text-decoration:underline;
+    text-underline-style:single;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    text-align:left;
+    border-top:1.0pt solid windowtext;
+    border-right:1.0pt solid windowtext;
+    border-bottom:1.0pt solid windowtext;
+    border-left:none;}
+    .xl96
+    {mso-style-parent:style16;
+    text-decoration:underline;
+    text-underline-style:single;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    text-align:left;
+    border-top:1.0pt solid windowtext;
+    border-right:none;
+    border-bottom:1.0pt solid windowtext;
+    border-left:1.0pt solid windowtext;}
+    .xl97
+    {mso-style-parent:style2;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    border:.5pt solid windowtext;}
+    .xl98
+    {mso-style-parent:style2;
+    font-weight:700;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    border:.5pt solid windowtext;}
+    .xl99
+    {mso-style-parent:style16;
+    color:blue;
+    text-decoration:underline;
+    text-underline-style:single;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    text-align:center;
+    border-top:1.0pt solid windowtext;
+    border-right:none;
+    border-bottom:1.0pt solid windowtext;
+    border-left:none;}
+    .xl100
+    {mso-style-parent:style16;
+    color:blue;
+    text-decoration:underline;
+    text-underline-style:single;
+    font-family:Arial, sans-serif;
+    mso-font-charset:0;
+    text-align:center;
+    border-top:1.0pt solid windowtext;
+    border-right:1.0pt solid windowtext;
+    border-bottom:1.0pt solid windowtext;
+    border-left:none;}
+    .xl101
+    {mso-style-parent:style0;
+    text-align:center;
+    border-top:1.0pt solid windowtext;
+    border-right:none;
+    border-bottom:1.0pt solid windowtext;
+    border-left:1.0pt solid windowtext;}
+    .xl102
+    {mso-style-parent:style0;
+    text-align:center;
+    border-top:1.0pt solid windowtext;
+    border-right:none;
+    border-bottom:1.0pt solid windowtext;
+    border-left:none;}
+    .xl103
+    {mso-style-parent:style0;
+    text-align:center;
+    border-top:1.0pt solid windowtext;
+    border-right:1.0pt solid windowtext;
+    border-bottom:1.0pt solid windowtext;
+    border-left:none;}
+    </style>
+{% endblock %}
+
+{% block body %}
+    <a class="link text-center w-full" href="{{ asset('build/files/Tourspel2020formulier.xlsx') }}">Download formulier</a>
+<div class="flex w-full justify-center">
+<table border=0 cellpadding=0 cellspacing=0 width=793 style='border-collapse:
+ collapse;table-layout:fixed;width:595pt'>
+    <col width=95 style='mso-width-source:userset;mso-width-alt:3474;width:71pt'>
+    <col width=64 span=5 style='width:48pt'>
+    <col width=122 style='mso-width-source:userset;mso-width-alt:4461;width:92pt'>
+    <col width=64 span=4 style='width:48pt'>
+    <tr height=42 style='height:31.5pt'>
+        <td height=42 class=xl90 colspan=3 width=223 style='height:31.5pt;mso-ignore:
+  colspan;width:167pt'>Tourspel 2020</td>
+        <td width=64 style='width:48pt'></td>
+        <td width=64 style='width:48pt'></td>
+        <td width=64 style='width:48pt'></td>
+        <td colspan=4 width=314 style='mso-ignore:colspan;width:236pt'>Inleveren voor
+            zaterdag 29 augustus (12.00 uur)</td>
+        <td width=64 style='width:48pt'></td>
+    </tr>
+    <tr height=22 style='height:16.5pt'>
+        <td height=22 class=xl82 colspan=5 style='height:16.5pt;mso-ignore:colspan'>Per
+            categorie 10 renners nummeren<span style='mso-spacerun:yes'> </span></td>
+        <td></td>
+        <td class=xl83 colspan=4 style='mso-ignore:colspan'>mailen naar:<span
+                    style='mso-spacerun:yes'>  </span>rene.vanleeuwen@ziggo.nl</td>
+        <td></td>
+    </tr>
+    <tr height=23 style='height:17.25pt'>
+        <td height=23 class=xl82 colspan=4 style='height:17.25pt;mso-ignore:colspan'><span
+                    style='mso-spacerun:yes'> </span>van 1-10 in de kolom KEUS.<span
+                    style='mso-spacerun:yes'> </span></td>
+        <td></td>
+        <td></td>
+        <td class=xl83></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr height=18 style='height:13.5pt'>
+        <td height=18 style='height:13.5pt'>Naam:</td>
+        <td colspan=5 class=xl101 style='border-right:1.0pt solid black'>&nbsp;</td>
+        <td class=xl84></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr height=18 style='height:13.5pt'>
+        <td height=18 style='height:13.5pt'></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr height=18 style='height:13.5pt'>
+        <td height=18 style='height:13.5pt'>E-mailadres</td>
+        <td colspan=4 class=xl66 style='border-right:1.0pt solid black'><u
+                    style='visibility:hidden;mso-ignore:visibility'>&nbsp;</u></td>
+        <td></td>
+        <td class=xl84>JOUW IBAN</td>
+        <td colspan=4 class=xl66 style='border-right:1.0pt solid black'><u
+                    style='visibility:hidden;mso-ignore:visibility'>&nbsp;</u></td>
+    </tr>
+    <tr height=18 style='height:13.5pt'>
+        <td height=18 class=xl84 style='height:13.5pt'></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class=xl84>MIJN IBAN</td>
+        <td class=xl96 colspan=3 style='mso-ignore:colspan'>NL 36 INGB 0004 483 682</td>
+        <td class=xl95 style='border-top:none'><u style='visibility:hidden;
+  mso-ignore:visibility'>&nbsp;</u></td>
+    </tr>
+    <tr height=18 style='height:13.5pt'>
+        <td height=18 style='height:13.5pt'></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl67 width=95 style='height:12.75pt;width:71pt'>Naam</td>
+        <td class=xl68 width=64 style='width:48pt'>ploeg</td>
+        <td class=xl68 width=64 style='width:48pt'>spec</td>
+        <td class=xl68 width=64 style='width:48pt'>eerdere</td>
+        <td class=xl69>KEUS</td>
+        <td></td>
+        <td class=xl67 width=122 style='width:92pt'>Naam</td>
+        <td class=xl68 width=64 style='width:48pt'>ploeg</td>
+        <td class=xl68 width=64 style='width:48pt'>spec</td>
+        <td class=xl68 width=64 style='width:48pt'>eerdere</td>
+        <td class=xl69>KEUS</td>
+    </tr>
+    <tr height=34 style='height:25.5pt'>
+        <td height=34 class=xl70 width=95 style='height:25.5pt;width:71pt'>&nbsp;</td>
+        <td class=xl71 width=64 style='width:48pt'>&nbsp;</td>
+        <td class=xl71 width=64 style='width:48pt'>&nbsp;</td>
+        <td class=xl72 width=64 style='width:48pt'>deel- names</td>
+        <td class=xl73>1-10</td>
+        <td></td>
+        <td class=xl70 width=122 style='width:92pt'>&nbsp;</td>
+        <td class=xl71 width=64 style='width:48pt'>&nbsp;</td>
+        <td class=xl71 width=64 style='width:48pt'>&nbsp;</td>
+        <td class=xl72 width=64 style='width:48pt'>deel- names</td>
+        <td class=xl73>1-10</td>
+    </tr>
+    <tr height=18 style='height:13.5pt'>
+        <td height=18 class=xl74 style='height:13.5pt'>Categorie: A</td>
+        <td class=xl75>&nbsp;</td>
+        <td class=xl76 width=64 style='width:48pt'>&nbsp;</td>
+        <td class=xl76 width=64 style='width:48pt'>&nbsp;</td>
+        <td class=xl77>&nbsp;</td>
+        <td></td>
+        <td class=xl74>Categorie: D</td>
+        <td class=xl75>&nbsp;</td>
+        <td class=xl76 width=64 style='width:48pt'>&nbsp;</td>
+        <td class=xl76 width=64 style='width:48pt'>&nbsp;</td>
+        <td class=xl77>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt'>Bardet</td>
+        <td class=xl92 style='border-left:none'>1.a2r</td>
+        <td class=xl92 style='border-left:none'>K/O</td>
+        <td class=xl97 align=right style='border-left:none'>7</td>
+        <td class=xl93 style='border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97>Bauer</td>
+        <td class=xl92 style='border-left:none'>1.mit</td>
+        <td class=xl92 style='border-left:none'>O/T</td>
+        <td class=xl97 align=right style='border-left:none'>5</td>
+        <td class=xl97 style='border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Bernal</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ine</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>2</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Bennett, G</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.jum</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/O</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>3</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Dumoulin, T</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.jum</td>
+        <td class=xl92 style='border-top:none;border-left:none'>T/K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>5</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Bennett, Sam</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ceu</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>2</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl98 style='height:12.75pt;border-top:none'>Froome</td>
+        <td class=xl91 style='border-top:none;border-left:none'>1.ine</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>8</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Bettiol</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.efd</td>
+        <td class=xl92 style='border-top:none;border-left:none'>HS</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>2</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Kruijswijk</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.jum</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>5</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Bol, C</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.sun</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>1</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Landa</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.bah</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>4</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Castroviejo</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ine</td>
+        <td class=xl92 style='border-top:none;border-left:none'>T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>5</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Pinot</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.gro</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/O/T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>7</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Chaves</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.mit</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>1</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Pogacar</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.uae</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>0</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Coquard</td>
+        <td class=xl92 style='border-top:none;border-left:none'>2.b&amp;b</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>3</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Porte</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.trk</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>9</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Cosnefroy</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.a2r</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>1</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Quintana, N</td>
+        <td class=xl92 style='border-top:none;border-left:none'>2.ark</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>6</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Craddock</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.efd</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/O</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>2</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Roglic</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.jum</td>
+        <td class=xl92 style='border-top:none;border-left:none'>T/K/O/HS</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>2</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>De Buyst</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.lot</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>2</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Thomas, G</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ine</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/T/HS</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>10</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>De la Cruz</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.uae</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>1</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl85 colspan=3 style='height:12.75pt;mso-ignore:colspan'>CONTROLEGETAL
+            CATEGORIE A</td>
+        <td class=xl86 style='border-top:none'>&nbsp;</td>
+        <td class=xl89 align=right style='border-top:none;font-size:10.0pt;
+  color:#9C0006;font-weight:400;text-decoration:none;text-underline-style:none;
+  text-line-through:none;font-family:Arial;border:.5pt solid windowtext;
+  background:#FFC7CE;mso-pattern:black none'>0</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>De Marchi</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ccc</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>4</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=18 style='height:13.5pt'>
+        <td height=18 class=xl74 style='height:13.5pt'>Categorie: B</td>
+        <td class=xl75>&nbsp;</td>
+        <td class=xl76 width=64 style='width:48pt'>&nbsp;</td>
+        <td class=xl76 width=64 style='width:48pt'>&nbsp;</td>
+        <td class=xl77>1-10</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>DeBusschere</td>
+        <td class=xl92 style='border-top:none;border-left:none'>2.b&amp;b</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>3</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt'>Alaphilippe</td>
+        <td class=xl92 style='border-left:none'>1.ceu</td>
+        <td class=xl92 style='border-left:none'>HS/K/T</td>
+        <td class=xl97 align=right style='border-left:none'>3</td>
+        <td class=xl91 style='border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Devenyns</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ceu</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>5</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Aru</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.uae</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>3</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Edet</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.cof</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>7</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Barguil</td>
+        <td class=xl92 style='border-top:none;border-left:none'>2.ark</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/HS/O</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>5</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Formolo</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.uae</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K/S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>0</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Boasson Hagen</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ntt</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S/HS/T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>9</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Garcia Cortina, I</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.bah</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>1</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Buchmann</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.bor</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>4</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Gaudu</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.gro</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>2</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Colbrelli</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.bah</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S/HS</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>3</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Geschke</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ccc</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K/HS</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>7</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Degenkolb</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.lot</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S/HS</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>6</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Grosschartner</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.bor</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>0</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Ewan</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.lot</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>1</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Herrada, Jesus</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.cof</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>5</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Greipel</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ica</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>9</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Hirschi</td>
+        <td class=xl97 style='border-top:none;border-left:none'>1.sun</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K/HS</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>0</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Kristoff</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.uae</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>7</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Hofstetter</td>
+        <td class=xl97 style='border-top:none;border-left:none'>1.ica</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>0</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Martin,
+            Daniel</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ica</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/HS</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>7</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Jungels</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ceu</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K/T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>2</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Mollema</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.trk</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/HS/O</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>9</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Kämna</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.bor</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/O/T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>1</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Sagan, P</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.bor</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S/HS/O</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>8</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Kragh Andersen, S</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.sun</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/T/S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>2</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Trentin, M</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ccc</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/S/T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>5</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Kreuziger</td>
+        <td class=xl97 style='border-top:none;border-left:none'>1.ntt</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>9</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Uran, R</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.efd</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/HS/T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>6</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Kuss</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.jum</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>0</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Valverde</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.mov</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/T/HS</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>12</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Lopez, M.A.</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ast</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>0</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>van Avermaet</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ccc</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S/HS/O</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>7</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Lutsenko</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ast</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K/HS</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>4</td>
+        <td class=xl97 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=18 style='height:13.5pt'>
+        <td height=18 class=xl97 style='height:13.5pt;border-top:none'>Viviani</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.cof</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>2</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl85 colspan=3 style='mso-ignore:colspan'>CONTROLEGETAL CATEGORIE D</td>
+        <td class=xl86 style='border-top:none'>&nbsp;</td>
+        <td class=xl89 align=right style='border-top:none;font-size:10.0pt;
+  color:#9C0006;font-weight:400;text-decoration:none;text-underline-style:none;
+  text-line-through:none;font-family:Arial;border:.5pt solid windowtext;
+  background:#FFC7CE;mso-pattern:black none'>0</td>
+    </tr>
+    <tr height=18 style='height:13.5pt'>
+        <td height=18 class=xl85 colspan=3 style='height:13.5pt;mso-ignore:colspan'>CONTROLEGETAL
+            CATEGORIE B</td>
+        <td class=xl86 style='border-top:none'>&nbsp;</td>
+        <td class=xl89 align=right style='border-top:none;font-size:10.0pt;
+  color:#9C0006;font-weight:400;text-decoration:none;text-underline-style:none;
+  text-line-through:none;font-family:Arial;border:.5pt solid windowtext;
+  background:#FFC7CE;mso-pattern:black none'>0</td>
+        <td></td>
+        <td class=xl78>Categorie: E</td>
+        <td class=xl79>&nbsp;</td>
+        <td class=xl80 width=64 style='width:48pt'>&nbsp;</td>
+        <td class=xl80 width=64 style='width:48pt'>&nbsp;</td>
+        <td class=xl81>1-10</td>
+    </tr>
+    <tr height=18 style='height:13.5pt'>
+        <td height=18 class=xl78 style='height:13.5pt'>Categorie: C</td>
+        <td class=xl79>&nbsp;</td>
+        <td class=xl80 width=64 style='width:48pt'>&nbsp;</td>
+        <td class=xl80 width=64 style='width:48pt'>&nbsp;</td>
+        <td class=xl81>1-10</td>
+        <td></td>
+        <td class=xl97>Madouas</td>
+        <td class=xl92 style='border-left:none'>1.gro</td>
+        <td class=xl92 style='border-left:none'>O/K</td>
+        <td class=xl97 align=right style='border-left:none'>0</td>
+        <td class=xl91 style='border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt'>Arndt</td>
+        <td class=xl92 style='border-left:none'>1.sun</td>
+        <td class=xl92 style='border-left:none'>S/O/T</td>
+        <td class=xl97 align=right style='border-left:none'>3</td>
+        <td class=xl91 style='border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Martin, G</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.cof</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/O</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>3</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Asgreen</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ceu</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>1</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Martinez, D.F.</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.efd</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>1</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Benoot</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.sun</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K/HS</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>3</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Mas, E</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.mov</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>1</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Bonifazio</td>
+        <td class=xl92 style='border-top:none;border-left:none'>2.tot</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>1</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Mezgec</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.mit</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>0</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Calmejane</td>
+        <td class=xl92 style='border-top:none;border-left:none'>2.tot</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K/HS</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>3</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Molard</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.gro</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>5</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Caruso, Dam</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.bah</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>5</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Morkov</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ceu</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>4</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Cort Nielsen</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.efd</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S/HS</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>2</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Navarro</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ica</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>9</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>De Gendt, T</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.lot</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K/T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>7</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Nieve</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.mit</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>5</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Fraile</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ast</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K/S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>2</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Oliveira</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.mov</td>
+        <td class=xl92 style='border-top:none;border-left:none'>T/S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>4</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Gallopin</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.a2r</td>
+        <td class=xl92 style='border-top:none;border-left:none'>HS/O/K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>9</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Pauwels</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ccc</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>6</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Gesink</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.jum</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>8</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Pedersen, M</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.trk</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>0</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Gilbert</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.lot</td>
+        <td class=xl92 style='border-top:none;border-left:none'>HS/O</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>9</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Poels</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.bah</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>7</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Impey</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.mit</td>
+        <td class=xl92 style='border-top:none;border-left:none'>HS/T/S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>7</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Polanc</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.uae</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>1</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Izagirre,
+            Gorka</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ast</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>7</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Politt</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ica</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>3</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Izagirre, Ion</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ast</td>
+        <td class=xl92 style='border-top:none;border-left:none'>T/K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>5</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Pozzovivo</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ntt</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>2</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Küng</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.gro</td>
+        <td class=xl92 style='border-top:none;border-left:none'>T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>3</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Reichenbach</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.gro</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>3</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Kwiatkovski</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ine</td>
+        <td class=xl92 style='border-top:none;border-left:none'>HS/K/T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>6</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Roelandts</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.mov</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>7</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Laporte</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.cof</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S/HS</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>5</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Rolland</td>
+        <td class=xl92 style='border-top:none;border-left:none'>2.b&amp;b</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/O</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>10</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Latour</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.a2r</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/HS</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>2</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Rojas Gil</td>
+        <td class=xl97 style='border-top:none;border-left:none'>1.mov</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>7</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Martin, Tony</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.jum</td>
+        <td class=xl92 style='border-top:none;border-left:none'>T/O</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>11</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Rosa</td>
+        <td class=xl92 style='border-top:none;border-left:none'>2.ark</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>1</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Meintjes</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ntt</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>3</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Schachmann</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.bor</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K/HS</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>1</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Muhlberger</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.bor</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>2</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Sicard</td>
+        <td class=xl92 style='border-top:none;border-left:none'>2.tot</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>6</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Naesen, O</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.a2r</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>4</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Sivakov, P</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ine</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>0</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Nizzolo</td>
+        <td class=xl97 style='border-top:none;border-left:none'>1.ntt</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>1</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Skujins</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.trk</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>2</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Roche, N</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.sun</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/HS</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>9</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Soler, M</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.mov</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>2</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Stuyven</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.trk</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>3</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Theuns</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.trk</td>
+        <td class=xl92 style='border-top:none;border-left:none'>S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>2</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Teuns</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.bah</td>
+        <td class=xl92 style='border-top:none;border-left:none'>HS/K/S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>1</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Valgren</td>
+        <td class=xl97 style='border-top:none;border-left:none'>1.ntt</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>5</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Van Aert</td>
+        <td class=xl97 style='border-top:none;border-left:none'>1.jum</td>
+        <td class=xl92 style='border-top:none;border-left:none'>T/O/S</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>1</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Vuillermoz</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.a2r</td>
+        <td class=xl92 style='border-top:none;border-left:none'>HS/K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>6</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Yates, A</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.mit</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/HS</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>4</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Wellens</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.lot</td>
+        <td class=xl92 style='border-top:none;border-left:none'>O/K</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>3</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl97 style='height:12.75pt;border-top:none'>Zakarin</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.ccc</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/T</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>3</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+        <td></td>
+        <td class=xl97 style='border-top:none'>Woods</td>
+        <td class=xl92 style='border-top:none;border-left:none'>1.efd</td>
+        <td class=xl92 style='border-top:none;border-left:none'>K/O</td>
+        <td class=xl97 align=right style='border-top:none;border-left:none'>1</td>
+        <td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 class=xl85 colspan=3 style='height:12.75pt;mso-ignore:colspan'>CONTROLEGETAL
+            CATEGORIE C</td>
+        <td class=xl86 style='border-top:none'>&nbsp;</td>
+        <td class=xl89 align=right style='border-top:none;font-size:10.0pt;
+  color:#9C0006;font-weight:400;text-decoration:none;text-underline-style:none;
+  text-line-through:none;font-family:Arial;border:.5pt solid windowtext;
+  background:#FFC7CE;mso-pattern:black none'>0</td>
+        <td></td>
+        <td class=xl85 colspan=3 style='mso-ignore:colspan'>CONTROLEGETAL CATEGORIE E</td>
+        <td class=xl86 style='border-top:none'>&nbsp;</td>
+        <td class=xl89 align=right style='border-top:none;font-size:10.0pt;
+  color:#9C0006;font-weight:400;text-decoration:none;text-underline-style:none;
+  text-line-through:none;font-family:Arial;border:.5pt solid windowtext;
+  background:#FFC7CE;mso-pattern:black none'>0</td>
+    </tr>
+    <tr height=17 style='height:12.75pt'>
+        <td height=17 style='height:12.75pt'></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td colspan=7 style='mso-ignore:colspan'></td>
+    </tr>
+    <![if supportMisalignedColumns]>
+    <tr height=0 style='display:none'>
+        <td width=95 style='width:71pt'></td>
+        <td width=64 style='width:48pt'></td>
+        <td width=64 style='width:48pt'></td>
+        <td width=64 style='width:48pt'></td>
+        <td width=64 style='width:48pt'></td>
+        <td width=64 style='width:48pt'></td>
+        <td width=122 style='width:92pt'></td>
+        <td width=64 style='width:48pt'></td>
+        <td width=64 style='width:48pt'></td>
+        <td width=64 style='width:48pt'></td>
+        <td width=64 style='width:48pt'></td>
+    </tr>
+    <![endif]>
+</table>
+</div>
+{% endblock %}

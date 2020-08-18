@@ -103,7 +103,6 @@ h4 {
 .content {
     max-width: 100vw;
     overflow-x: scroll;
-    flex-direction: row;
 }
 
 .etappes tbody tr:nth-child(even) {

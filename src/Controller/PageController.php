@@ -19,4 +19,14 @@ class PageController extends AbstractController
             'controller_name' => 'PageController',
         ]);
     }
+
+    /**
+     * @Route("/formulier", name="formulier_page")
+     */
+    public function formulier()
+    {
+        return $this->render('page/formulier.html.twig', [
+            'controller_name' => 'PageController',
+        ]);
+    }
 }
