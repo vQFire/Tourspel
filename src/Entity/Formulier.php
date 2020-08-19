@@ -32,6 +32,11 @@ class Formulier
      */
     private $Content;
 
+    /**
+     * @ORM\Column(type="string", length=30, nullable=true)
+     */
+    private $Type;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class Formulier
     public function setContent(string $Content): self
     {
         $this->Content = $Content;
+
+        return $this;
+    }
+
+    public function getType(): ?string
+    {
+        return $this->Type;
+    }
+
+    public function setType(?string $Type): self
+    {
+        $this->Type = $Type;
 
         return $this;
     }

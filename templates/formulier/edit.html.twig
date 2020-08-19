@@ -15,11 +15,15 @@
             {{ form_widget(form.Year, {'attr': {'class': 'border rounded px-1'}}) }}
         </div>
         <div class="py-2">
+            {{ form_label(form.Type) }}
+            {{ form_widget(form.Type) }}
+        </div>
+        <div class="py-2">
             {{ form_label(form.Content) }}
             {{ form_widget(form.Content) }}
         </div>
         <div class="flex mt-auto">
-            <a class="bg-blue-500 hover:bg-blue-700 transition-colors duration-200 text-white font-bold py-2 px-4 rounded" href="{{ path('formulier_page') }}">Terug</a>
+            <a class="bg-blue-500 hover:bg-blue-700 transition-colors duration-200 text-white font-bold py-2 px-4 rounded" href="{{ path('regel_page') }}">Terug</a>
             <button class="bg-green-500 hover:bg-green-700 transition-colors duration-200 text-white font-bold py-2 px-4 rounded mx-3">{{ "Opslaan"|default('Save') }}</button>
         </div>
     {{ form_end(form) }}

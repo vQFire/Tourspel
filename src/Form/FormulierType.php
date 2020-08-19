@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Formulier;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -17,7 +18,20 @@ class FormulierType extends AbstractType
             ->add('Year', null, [
                 'label' => 'Jaar'
             ])
-            ->add('Content', CKEditorType::class, [])
+            ->add('Type', ChoiceType::class, [
+                'choices' => [
+                    'Regels' => 'Regels',
+                    'Formulier' => 'Formulier'
+                ]
+            ])
+            ->add('Content', CKEditorType::class, [
+                'config' => [
+                    'allowedContent' => true,
+                    'extra_allow_content' => 'table(*)',
+                    'paste_filter' => null,
+                    'language' => 'nl'
+                ],
+            ])
         ;
     }
 
