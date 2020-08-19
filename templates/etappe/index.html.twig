@@ -78,7 +78,7 @@
 
 
     <h2 class="mb-3 mt-12">Historie</h2>
-    <form class="flex flex-col w-screen md:flex-row pb-8" method="get" action="{{ path('etappe_index') }}">
+    <form class="flex flex-col md:flex-row pb-8 px-2" method="get" action="{{ path('etappe_index') }}">
         <div class="relative w-full md:w-4/12">
             <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-12" name="year" id="years">
                 <option value="all">Alle jaren</option>
@@ -105,7 +105,7 @@
             </section>
         </div>
         <div class="flex justify-center items-center w-full md:w-2/12 ">
-            <button class="bg-green-500 hover:bg-green-700 transition-colors duration-200 text-white font-bold py-3 px-6 md:py-2 md:px-4 rounded mx-3" type="submit">Zoeken</button>
+            <button class="btn btn-green mx-3" type="submit">Zoeken</button>
         </div>
     </form>
 {% endblock %}

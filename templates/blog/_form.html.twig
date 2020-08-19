@@ -1,0 +1,12 @@
+{{ form_start(form) }}
+    <div class="py-2">
+        {{ form_label(form.Titel) }}
+        {{ form_widget(form.Titel, {'attr': {'class': 'border rounded px-1'}}) }}
+    </div>
+    <div class="py-2">
+        {{ form_label(form.Content) }}
+        {{ form_widget(form.Content) }}
+    </div>
+
+    <button class="btn btn-green">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
