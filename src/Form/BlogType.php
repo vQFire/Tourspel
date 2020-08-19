@@ -15,7 +15,11 @@ class BlogType extends AbstractType
     {
         $builder
             ->add('Titel')
-            ->add('Content', CKEditorType::class)
+            ->add('Content', CKEditorType::class, [
+                'config' => [
+                    'format_tags' => "p;h2;h3;h4"
+                ]
+            ])
         ;
     }
 
