@@ -21,7 +21,8 @@ class FormulierType extends AbstractType
             ->add('Type', ChoiceType::class, [
                 'choices' => [
                     'Regels' => 'Regels',
-                    'Formulier' => 'Formulier'
+                    'Formulier' => 'Formulier',
+                    'Wat heeft wie' => 'Wat heeft wie'
                 ]
             ])
             ->add('Content', CKEditorType::class, [

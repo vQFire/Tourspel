@@ -30,28 +30,6 @@ class FormulierController extends AbstractController
     }
 
     /**
-     * @Route("/regels/edit/{id}", name="regel_edit")
-     */
-    public function regelsEdit(Request $request, Formulier $formulier)
-    {
-        $this->denyAccessUnlessGranted('ROLE_ADMIN');
-
-        $form = $this->createForm(FormulierType::class, $formulier);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
-
-            $this->redirectToRoute('regel_page');
-        }
-
-        return $this->render('formulier/edit.html.twig', [
-            'formulier' => $formulier,
-            'form' => $form->createView()
-        ]);
-    }
-
-    /**
      * @Route("/formulier", name="formulier_page")
      */
     public function formulier (FormulierRepository $formulierRepository)
@@ -62,6 +40,18 @@ class FormulierController extends AbstractController
     }
 
     /**
+     * @Route("/whw", name="whw_page")
+     */
+    public function whw (FormulierRepository $formulierRepository)
+    {
+        return $this->render('formulier/index.html.twig', [
+            'formulier' => $formulierRepository->findOneBy(['Type' => 'Wat heeft wie']),
+        ]);
+    }
+
+    /**
+     * @Route("/regel/edit/{id}", name="regel_edit")
+     * @Route("/whw/edit/{id}", name="whw_edit")
      * @Route("/formulier/edit/{id}", name="formulier_edit")
      */
     public function formulierEdit (Request $request, Formulier $formulier)
@@ -74,7 +64,7 @@ class FormulierController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            $this->redirectToRoute('formulier_page');
+            $this->redirectToRoute('home_page');
         }
 
         return $this->render('formulier/edit.html.twig', [
@@ -86,6 +76,7 @@ class FormulierController extends AbstractController
     /**
      * @Route("/formulier/new", name="formulier_new")
      * @Route("/regels/new", name="regel_new")
+     * @Route("/whw/new", name="whw_new")
      */
     public function newForm (Request $request)
     {
