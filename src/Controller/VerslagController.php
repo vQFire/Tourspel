@@ -79,7 +79,7 @@ class VerslagController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('verslag_index');
+            return $this->redirectToRoute('etappe_index');
         }
 
         return $this->render('verslag/edit.html.twig', [
